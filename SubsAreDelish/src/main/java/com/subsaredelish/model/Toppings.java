@@ -1,17 +1,37 @@
-//package com.subsaredelish.model;
-//
-//public class Toppings {
-//
-//    private String name;
-//    private ToppingType type;
-//    private boolean isExtra;
-//
-//    public Topping(String name, ToppingType type, boolean isExtra) {
-//        this.name = name;
-//        this.type = type;
-//        this.isExtra = isExtra;
-//    }
-//
+package com.subsaredelish.model;
+
+import com.subsaredelish.ui.UserInterface;
+
+public class Toppings extends UserInterface {
+
+    private String nameOfTopping;
+    private String toppingType ;
+    private boolean isExtra;
+
+    public Toppings(String nameOfTopping, String toppingType, boolean isExtra) {
+        this.nameOfTopping = nameOfTopping; //steak, ham, chicken, bacon
+        this.toppingType = toppingType; //meat, extra meat, cheese, extra cheese, sauces, sides
+        this.isExtra = isExtra; //shows if it will be premium or regular depending on if it costs
+    }
+
+    public String getNameOfTopping() {
+        return nameOfTopping;
+    }
+
+    public String getToppingType() {
+        return toppingType;
+    }
+
+    public boolean isExtra() {
+        return isExtra;
+    }
+
+    public String toString() {
+    return nameOfTopping + (isExtra ? " (extra) " : " ");
+
+    }
+}
+
 //    public String getName() {
 //        return name;
 //    }
@@ -24,7 +44,7 @@
 //        return isExtra;
 //    }
 //
-//    public double getPrice(String size) {
+//    public double getPrice(String sandwichSize) {
 //        // Basic pricing logic for premium toppings
 //        switch (type) {
 //            case MEAT:
