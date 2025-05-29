@@ -1,22 +1,36 @@
-//package com.subsaredelish.model;
-//
-//public class Drink implements Order{
-//
-//    private String drinkSize;
-//    private String flavor;
-//
-//    public Drink(String drinkSize, String flavor) {
-//        this.drinkSize = drinkSize;
-//        this.flavor = flavor;
-//    }
-//
-//    @Override
-//    public double getPrice() {
-//        switch (drinkSize.toLowerCase()) {
-//            case "small": return "$" + 2.00;
-//            case "meduium" return 2.50;
-//            case "large": return 3.00;
-//            default: return 0.0;
-//        }
-//    }
-//}
+package com.subsaredelish.model;
+
+public class Drink {
+
+    private String drinkSize;
+    private String drinkFlavor;
+
+    public Drink(String drinkSize, String drinkFlavor) {
+        this.drinkSize = drinkSize.toLowerCase();
+        this.drinkFlavor = drinkFlavor;
+    }
+
+    public String getDrinkSize() {
+        return drinkSize;
+    }
+
+    public String getDrinkFlavor() {
+        return drinkFlavor;
+    }
+
+    public double getPrice() {
+        switch (drinkSize) {
+            case "small":
+                return 2.00;
+            case "medium":
+                return 2.50;
+            case "large":
+                return 3.00;
+            default:
+                return 0.0;
+        }
+    }
+    public String toString() {
+        return drinkFlavor + "( " + drinkSize + "} - $" + String.format("%.2f" , getPrice());
+    }
+}

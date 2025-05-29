@@ -1,17 +1,15 @@
 package com.subsaredelish.model;
 
-import com.subsaredelish.ui.UserInterface;
-
-public class Toppings extends UserInterface {
+public class Toppings {
 
     private String nameOfTopping;
     private String toppingType ;
-    private boolean isExtra;
+    private boolean isPremium;
 
-    public Toppings(String nameOfTopping, String toppingType, boolean isExtra) {
+    public Toppings(String nameOfTopping, String toppingType, boolean isPremium) {
         this.nameOfTopping = nameOfTopping; //steak, ham, chicken, bacon
-        this.toppingType = toppingType; //meat, extra meat, cheese, extra cheese, sauces, sides
-        this.isExtra = isExtra; //shows if it will be premium or regular depending on if it costs
+        this.toppingType = toppingType.toLowerCase(); //meat, extra meat, cheese, extra cheese, sauces, sides
+        this.isPremium = isPremium; //shows if it will be premium or regular depending on if it costs
     }
 
     public String getNameOfTopping() {
@@ -22,28 +20,52 @@ public class Toppings extends UserInterface {
         return toppingType;
     }
 
-    public boolean isExtra() {
-        return isExtra;
+    public boolean isPremium() {
+        return isPremium;
     }
 
     public String toString() {
-    return nameOfTopping + (isExtra ? " (extra) " : " ");
+    return nameOfTopping + (isPremium ? " (premium) " : " ");
 
+    }
+
+    public double getPrice(String sandwichSize) {
+        double price = 0.0;
+
+        if (!isPremium) {
+            return 0.0;
+        }
+
+        switch (toppingType) {
+            case "meat":
+                if (sandwichSize.equals("4 inch")) price = 1.00;
+                else if (sandwichSize.equals("8 inch")) price = 2.00;
+                else if (sandwichSize.equals("12 inch")) price = 3.00;
+                break;
+
+            case "extra meat":
+                if (sandwichSize.equals("4 inch")) price = 0.50;
+                else if (sandwichSize.equals("8 inch")) price = 1.00;
+                else if (sandwichSize.equals("12 inch")) price = 1.50;
+                break;
+
+            case "cheese":
+                if (sandwichSize.equals("4 inch")) price = 0.75;
+                else if (sandwichSize.equals("8 inch")) price = 1.50;
+                else if (sandwichSize.equals("12 inch")) price = 2.25;
+                break;
+
+            case "extra cheese":
+                if (sandwichSize.equals("4 inch")) price = 0.30;
+                else if (sandwichSize.equals("8 inch")) price = 0.60;
+                else if (sandwichSize.equals("12 inch")) price = 0.90;
+                break;
+        }
+
+        return price;
     }
 }
 
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public ToppingType getType() {
-//        return type;
-//    }
-//
-//    public boolean isExtra() {
-//        return isExtra;
-//    }
-//
 //    public double getPrice(String sandwichSize) {
 //        // Basic pricing logic for premium toppings
 //        switch (type) {

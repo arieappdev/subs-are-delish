@@ -1,18 +1,27 @@
-//package com.subsaredelish.model;
-//
-//public class Chips implements Order {
-//
-//    private String chipType;
-//    private double price;
-//
-//    public Chips(String chipType) {
-//        this.chipType = chipType;
-//    }
-//
-//    @Override
-//    public double getPrice() {
-//        return 1.50;
-//
-//}
-//}
-//
+package com.subsaredelish.model;
+
+public class Chips implements Order {
+
+    private String chipType;
+    private double chipPrice;
+
+    public Chips(String chipType) {
+        this.chipType = chipType;
+        this.chipPrice = 1.50;
+    }
+
+    public String getChipType() {
+        return chipType;
+    }
+
+    public double getChipPrice() {
+        return chipPrice;
+    }
+
+    public String toString() {
+        return chipType + "Chips - $" + String.format("%.2f", chipPrice);
+
+    }
+}
+
+

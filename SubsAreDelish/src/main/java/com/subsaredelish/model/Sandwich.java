@@ -1,8 +1,5 @@
 package com.subsaredelish.model;
 
-import java.util.ArrayList;
-//import java.util.List;
-
 // where you put all the bread and toppings along with pricing
 public class Sandwich {
 
@@ -77,28 +74,4 @@ public class Sandwich {
 //            case CHEESE: cheeses.add(topping); break;
 //            case REGULAR: regulars.add(topping); break;
 //            case SAUCE: sauces.add(topping); break;
-//        }
-//    }
-//
-//    @Override
-//    public double getPrice() {
-//        double basePrice = getBasePrice();
-//        double toppingsCost = 0.0;
-//
-//        for (Topping topping : meats) toppingsCost += topping.getPrice(size);
-//        for (Topping topping : cheeses) toppingsCost += topping.getPrice(size);
-//        // regular and sauces = $0
-//
-//        return basePrice + toppingsCost;
-//    }
-//
-//    private double getBasePrice() {
-//        switch (size) {
-//            case "4": return 5.50;
-//            case "8": return 7.00;
-//            case "12": return 8.50;
-//            default: return 0.0;
-//        }
-//    }
-//
 

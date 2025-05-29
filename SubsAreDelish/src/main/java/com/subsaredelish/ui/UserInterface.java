@@ -92,7 +92,7 @@ public class UserInterface {
 
     //loop through size of drinks and what kind of drink (advise cost)
     private void addDrink (Order order) {
-        System.out.println("What size drink would you like?");
+        System.out.println("What size drink would you like? (small/medium/large) ");
         System.out.println("What flavor would you like?");
     }
 
