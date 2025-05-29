@@ -1,7 +1,6 @@
 package com.subsaredelish;
 import com.subsaredelish.ui.UserInterface;
 
-
 import java.util.Scanner;
 
 //where you run the codes and call the methods to put the calculations
@@ -9,8 +8,8 @@ import java.util.Scanner;
 public class DeliApp {
     public static void main(String[] args) {
 
-        UserInterface ui = new UserInterface();
-        ui.homeScreen();
+        UserInterface userInterface = new UserInterface();
+        userInterface.homeScreen();
 
 
 

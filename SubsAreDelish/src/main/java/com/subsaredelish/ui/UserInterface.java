@@ -1,5 +1,8 @@
 package com.subsaredelish.ui;
 
+import com.subsaredelish.model.Chips;
+import com.subsaredelish.model.Order;
+
 import java.util.Scanner;
 
 //this is where your home screen, order screen,
@@ -60,7 +63,9 @@ public class UserInterface {
 
             switch (choice) {
                 case "1":
+                    //SandwichView.addSandwich(currentOrder)  if you wanted to create a new view for adding a sandwich
                     addSandwich(currentOrder);
+
                     break;
                 case "2":
                     addDrink(currentOrder);
@@ -85,6 +90,11 @@ public class UserInterface {
     // i'd like to do an if or streams for regular vs premium toppings to loop through upon user input-Toppings array list
     private void addSandwich(Order order) {
         System.out.println("What bread would you like for your sandwich ? ");
+        System.out.println("""
+                1) White
+                """);
+
+
         System.out.println("What size sandwich would you like? ");
         System.out.println("What toppings would you like on your sandwich? ");
         System.out.println("Would you like your sandwich toasted? ");
@@ -98,6 +108,14 @@ public class UserInterface {
 
     private void addChips(Order order) {
         System.out.println("What kind of chips would you like?");
+        System.out.println("""
+                1) Lays
+                """);
+
+
+
+        //chips should be added to order inside of a switch statemnt
+        order.addItemToOrder(new Chips("Lays"));
     }
 
     public void displayCheckoutScreen() {
@@ -105,6 +123,10 @@ public class UserInterface {
 
             System.out.println("1- Confirm"); //upon pressing receipt writes to file and loops back to home screen
             System.out.println("2- Cancel"); //deletes order and loops back to home screen
+        }
+
+        private void checkout(Order order){
+
         }
 }
 

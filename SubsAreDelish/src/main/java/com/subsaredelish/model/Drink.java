@@ -1,6 +1,6 @@
 package com.subsaredelish.model;
 
-public class Drink {
+public class Drink implements OrderItem{
 
     private String drinkSize;
     private String drinkFlavor;
@@ -32,5 +32,10 @@ public class Drink {
     }
     public String toString() {
         return drinkFlavor + "( " + drinkSize + "} - $" + String.format("%.2f" , getPrice());
+    }
+
+    @Override
+    public double getItemCost() {
+        return getPrice();
     }
 }

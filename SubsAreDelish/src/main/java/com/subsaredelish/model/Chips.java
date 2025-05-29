@@ -1,6 +1,6 @@
 package com.subsaredelish.model;
 
-public class Chips implements Order {
+public class Chips implements OrderItem {
 
     private String chipType;
     private double chipPrice;
@@ -21,6 +21,11 @@ public class Chips implements Order {
     public String toString() {
         return chipType + "Chips - $" + String.format("%.2f", chipPrice);
 
+    }
+
+    @Override
+    public double getItemCost() {
+        return chipPrice;
     }
 }
 
