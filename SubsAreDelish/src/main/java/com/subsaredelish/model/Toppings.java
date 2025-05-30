@@ -4,7 +4,7 @@ public class Toppings implements OrderItem {
 
     private String nameOfTopping;
     private String toppingType ;
-    private boolean isPremium;
+    private boolean isPremium; //I never actually used this but keeping for example
 
     public Toppings(String nameOfTopping, String toppingType) {
         this.nameOfTopping = nameOfTopping; //steak, ham, chicken, bacon

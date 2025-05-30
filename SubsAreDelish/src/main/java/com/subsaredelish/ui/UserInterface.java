@@ -111,6 +111,8 @@ public class UserInterface {
 //        else if (sandwichSize.equals("3")) size = "12 ";
 //        else size = "Invalid";
 
+
+        //used if else statements to practice if else statements
         System.out.println("What bread would you like for your sandwich ?");
         System.out.println("""
                 1) White
@@ -127,6 +129,7 @@ public class UserInterface {
         else breadType = "White";
 
         sandwich.setBreadType(breadType);
+
 
         boolean addingMeat = true;
 
@@ -170,7 +173,6 @@ public class UserInterface {
             }
 
         }
-            //veggies
 
         boolean addingVeggies = true;
 
@@ -225,31 +227,6 @@ public class UserInterface {
             }
         }
 
-//        boolean addingVeggies = true;
-//
-//        while (addingVeggies) {
-//            System.out.println("Choose Veggies: ");
-//
-//            for (String veggie : SandwichHelper.REGULAR) {
-//                System.out.println(veggie);
-//            }
-//
-//            String veggieSelection = scanner.nextLine();
-//
-//            // Matches your naming style more closely
-//            Toppings selectedVeggie = new Toppings(veggieSelection, "regular");
-//            sandwich.addTopping(selectedVeggie);
-//
-//            System.out.println("Would you like to add more?");
-//            System.out.println("Y/N");
-//
-//            if (!scanner.nextLine().equalsIgnoreCase("y")) {
-//                addingVeggies = false;
-//            }
-//        }
-
-            //sauces
-
         boolean addingSauce = true;
         //mayo, mustard, ketchup, ranch, thousand islands, vinaigrette
 
@@ -292,7 +269,6 @@ public class UserInterface {
             }
         }
 
-            //side
         boolean addingSide = true;
 
         while (addingSide) {
@@ -353,7 +329,6 @@ public class UserInterface {
 
                 String size = scanner.nextLine();
 
-
                 System.out.println("What flavor would you like?");
                 System.out.println("Coke");
                 System.out.println("Sprite");
@@ -367,7 +342,6 @@ public class UserInterface {
     }
 
     private void addChips(Order order) {
-
 
         System.out.println("What kind of chips would you like?");
         System.out.println(" Lays");
