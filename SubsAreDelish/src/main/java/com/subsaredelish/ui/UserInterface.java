@@ -250,6 +250,48 @@ public class UserInterface {
 
             //sauces
 
+        boolean addingSauce = true;
+        //mayo, mustard, ketchup, ranch, thousand islands, vinaigrette
+
+        while (addingSauce) {
+            System.out.println("Choose a sauce topping:");
+            System.out.println("1) Mayo");
+            System.out.println("2) Mustard");
+            System.out.println("3) Ketchup");
+            System.out.println("4) Ranch");
+            System.out.println("5) Thousand Island");
+            System.out.println("6) Vinaigrette");
+            System.out.println("0) Done adding veggies");
+
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1":
+                    sandwich.addTopping(new Toppings("Mayo", "sauce"));
+                    break;
+                case "2":
+                    sandwich.addTopping(new Toppings("Mustard", "sauce"));
+                    break;
+                case "3":
+                    sandwich.addTopping(new Toppings("Ketchup", "sauce"));
+                    break;
+                case "4":
+                    sandwich.addTopping(new Toppings("Ranch", "sauce"));
+                    break;
+                case "5":
+                    sandwich.addTopping(new Toppings("Thousand Island", "sauce"));
+                    break;
+                case "6":
+                    sandwich.addTopping(new Toppings("Vinaigrette", "sauce"));
+                    break;
+                case "0":
+                    addingSauce = false;
+                    break;
+                default:
+                    System.out.println("Invalid option. Please select again.");
+            }
+        }
+
             //side
 
             System.out.println("Would you like your sandwich toasted? ");
