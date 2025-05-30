@@ -1,0 +1,3 @@
+8 Wheat Sandwich (toasted)
+Toppings: [steak , swiss , Lettuce , Onions , Jalapeños , Mushrooms ]
+Item Cost: $10.50

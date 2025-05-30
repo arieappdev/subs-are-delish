@@ -5,9 +5,6 @@ import com.subsaredelish.model.*;
 
 import java.util.Scanner;
 
-//this is where your home screen, order screen,
-//and add sandwich screen go, add to order, checkout/receipt
-
 public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
     private boolean running = true;
@@ -92,9 +89,9 @@ public class UserInterface {
     }
 
     //loop through all the sandwich options bread, meat, cheese, toppings, sauces, sides, any extras (advise cost)
-    // i'd like to do an if or streams for regular vs premium toppings to loop through upon user input-Toppings array list
+
     private void addSandwich(Order order) {
-        //   Order currentOrder = new Order();
+
         Sandwich sandwich = new Sandwich();
 
         System.out.println("\n----Let's Make A Sandwich----");
@@ -103,16 +100,16 @@ public class UserInterface {
         System.out.println("8");
         System.out.println("12");
 
-        //  String choice = scanner.nextLine().trim();
-
         String sandwichSize = scanner.nextLine();
         sandwich.setSandwichSize(sandwichSize);
+
+        //want to make sure i'm utilizing code i created in sandwich class to pull into my UI-see above
+
 //        String size = "";
 //        if (sandwichSize.equals("1")) size = "4 " ;
 //        else if (sandwichSize.equals("2")) size = "8 " ;
 //        else if (sandwichSize.equals("3")) size = "12 ";
 //        else size = "Invalid";
-
 
         System.out.println("What bread would you like for your sandwich ?");
         System.out.println("""
@@ -153,12 +150,11 @@ public class UserInterface {
 // while loop else it should repeat this part of the menu
 
         }
-        //cheese
+        //cheese didn't do switch since there is math logic and didn't wanna mess it up same for meat
         boolean addingCheese = true;
         while (addingCheese) {
             System.out.println("Choose Cheese: ");
 
-            //meats
             for (String cheese : SandwichHelper.CHEESE) {
                 System.out.println(cheese);
             }
@@ -176,9 +172,85 @@ public class UserInterface {
         }
             //veggies
 
+        boolean addingVeggies = true;
+
+        while (addingVeggies) {
+            System.out.println("Choose a veggie topping:");
+            System.out.println("1) Lettuce");
+            System.out.println("2) Peppers");
+            System.out.println("3) Onions");
+            System.out.println("4) Tomatoes");
+            System.out.println("5) Jalapeños");
+            System.out.println("6) Cucumbers");
+            System.out.println("7) Pickles");
+            System.out.println("8) Guacamole");
+            System.out.println("9) Mushrooms");
+            System.out.println("0) Done adding veggies");
+
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1":
+                    sandwich.addTopping(new Toppings("Lettuce", "regular"));
+                    break;
+                case "2":
+                    sandwich.addTopping(new Toppings("Peppers", "regular"));
+                    break;
+                case "3":
+                    sandwich.addTopping(new Toppings("Onions", "regular"));
+                    break;
+                case "4":
+                    sandwich.addTopping(new Toppings("Tomatoes", "regular"));
+                    break;
+                case "5":
+                    sandwich.addTopping(new Toppings("Jalapeños", "regular"));
+                    break;
+                case "6":
+                    sandwich.addTopping(new Toppings("Cucumbers", "regular"));
+                    break;
+                case "7":
+                    sandwich.addTopping(new Toppings("Pickles", "regular"));
+                    break;
+                case "8":
+                    sandwich.addTopping(new Toppings("Guacamole", "regular"));
+                    break;
+                case "9":
+                    sandwich.addTopping(new Toppings("Mushrooms", "regular"));
+                    break;
+                case "0":
+                    addingVeggies = false;
+                    break;
+                default:
+                    System.out.println("Invalid option. Please select again.");
+            }
+        }
+
+//        boolean addingVeggies = true;
+//
+//        while (addingVeggies) {
+//            System.out.println("Choose Veggies: ");
+//
+//            for (String veggie : SandwichHelper.REGULAR) {
+//                System.out.println(veggie);
+//            }
+//
+//            String veggieSelection = scanner.nextLine();
+//
+//            // Matches your naming style more closely
+//            Toppings selectedVeggie = new Toppings(veggieSelection, "regular");
+//            sandwich.addTopping(selectedVeggie);
+//
+//            System.out.println("Would you like to add more?");
+//            System.out.println("Y/N");
+//
+//            if (!scanner.nextLine().equalsIgnoreCase("y")) {
+//                addingVeggies = false;
+//            }
+//        }
 
             //sauces
 
+            //side
 
             System.out.println("Would you like your sandwich toasted? ");
             System.out.println("Y/N");
@@ -193,21 +265,27 @@ public class UserInterface {
         }
 
 
-    //loop through size of drinks and what kind of drink (advise cost)
+    //loop through size of drinks and what kind of drink (advise cost) case small/med/large
     private void addDrink (Order order) {
 
-                System.out.println("What size drink would you like? (small/medium/large) ");
+                System.out.println("What size drink would you like? ");
+                System.out.println("small");
+                System.out.println("medium");
+                System.out.println("large");
+
                 String size = scanner.nextLine();
 
 
                 System.out.println("What flavor would you like?");
-                //print out the differnt they can choose from
+                System.out.println("Coke");
+                System.out.println("Sprite");
+                System.out.println("Sweet Tea");
+                System.out.println("Tahiti Treat");
+                System.out.println("Water");
+
                 String flavor =scanner.nextLine();
 
-
                 order.addItemToOrder(new Drink(size,flavor));
-
-
     }
 
     private void addChips(Order order) {
@@ -223,14 +301,12 @@ public class UserInterface {
         String type = scanner.nextLine();
 
         // if we number the menu we need to switch on the nu,ber
-//        switch (type){
+//        switch (){
 //            case "1":
 //                order.addItemToOrder(new Chips("Lays"));
        // break;
 //
 //        }
-
-
         //chips should be added to order inside of a switch statemnt
         order.addItemToOrder(new Chips(type));
     }

@@ -58,9 +58,9 @@ public class Sandwich implements OrderItem {
         this.toasted = toasted;
     }
 
-    // add toppings to
+    // what prints on receipt
     public String toString() {
-        return sandwichSize + " " + breadType + " Sandwich" + (toasted ? " (toasted)" : ""  ) + "\nToppings: " + toppings;
+        return sandwichSize + " " + breadType + " Sandwich" + (toasted ? " (toasted)" : ""  ) + "\nToppings: " + toppings + "\nItem Cost: $" + String.format("%.2f", getItemCost()) + "\n";
     }
 
     @Override

@@ -10,6 +10,7 @@ public class Drink implements OrderItem{
         this.drinkFlavor = drinkFlavor;
     }
 
+    //never used get drink size or flavor could've gone in U.I for switch cases but ran out of time
     public String getDrinkSize() {
         return drinkSize;
     }

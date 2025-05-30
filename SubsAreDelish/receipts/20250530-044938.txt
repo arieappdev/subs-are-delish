@@ -1,0 +1,3 @@
+4 White Sandwich (toasted)
+Toppings: [steak , swiss , lettuce , onions , cucumbers ]
+Item Cost: $7.25

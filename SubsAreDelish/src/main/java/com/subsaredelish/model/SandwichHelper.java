@@ -10,4 +10,6 @@ public class SandwichHelper {
     public static  String[] SAUCE = {"mayo, mustard, ketchup, ranch, thousand islands, vinaigrette "};
     public static  String[] SIDE = {"au jus"};
 
+
+    //using switch case statements instead so user doesn't have to spell the options out but leaving as a choice
 }
