@@ -1,5 +1,6 @@
 package com.subsaredelish.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // where you put all the bread and toppings along with pricing
@@ -9,12 +10,15 @@ public class Sandwich implements OrderItem {
     private String breadType;
     private boolean toasted;
 
-    private List<Toppings> toppings;
+    private List<Toppings> toppings = new ArrayList<>();
 
     public Sandwich(String sandwichSize, String breadType, boolean toasted) {
         this.sandwichSize = sandwichSize;
         this.breadType = breadType;
         this.toasted = toasted;
+    }
+
+    public Sandwich() {
     }
 
     private double calculateBasePrice() {
@@ -30,7 +34,7 @@ public class Sandwich implements OrderItem {
         }
     }
 
-        public String getSandwichSize() {
+    public String getSandwichSize() {
         return sandwichSize;
     }
 
@@ -54,6 +58,7 @@ public class Sandwich implements OrderItem {
         this.toasted = toasted;
     }
 
+    // add toppings to
     public String toString() {
         return sandwichSize + " " + breadType + " Sandwich" + (toasted ? " (toasted)" : "");
     }
@@ -64,19 +69,19 @@ public class Sandwich implements OrderItem {
         double total = 0;
 
         //add base price
-        total+= calculateBasePrice();
+        total += calculateBasePrice();
 
         //add meat price
-        total+=getMeatPrice();
+        total += getMeatPrice();
 
         //add cheese price
-        total+=getCheesePrice();
+        total += getCheesePrice();
 
         return total;
     }
 
     //meatprice helper method
-    private double getMeatPrice(){
+    private double getMeatPrice() {
         double meatPrice = 0;
 
         switch (sandwichSize) {
@@ -198,19 +203,11 @@ public class Sandwich implements OrderItem {
         }
         return cheesePrice;
     }
-}
 
-//    private List<Topping> meats = new ArrayList<>();
-//    private List<Topping> cheeses = new ArrayList<>();
-//    private List<Topping> regulars = new ArrayList<>();
-//    private List<Topping> sauces = new ArrayList<>();
-//
-//    }
-//
-//    public void addTopping(Topping topping) {
-//        switch (topping.getType()) {
-//            case MEAT: meats.add(topping); break;
-//            case CHEESE: cheeses.add(topping); break;
-//            case REGULAR: regulars.add(topping); break;
-//            case SAUCE: sauces.add(topping); break;
+
+    public void addTopping(Toppings topping) {
+        toppings.add(topping);
+
+    }
+}
 

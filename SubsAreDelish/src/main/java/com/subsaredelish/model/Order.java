@@ -21,8 +21,20 @@ import java.util.List;
             this.items.add(item);
         }
 
+        public List<OrderItem> getItems() {
+            return items;
+        }
         //toString to print out the order to the user
         //and you can use the same to string to print out the order to the receipt
+
+        public double getOrdertotal(){
+            double total = 0;
+            for(OrderItem item: items){
+                total += item.getItemCost();
+            }
+
+            return  total;
+        }
 
     }
 

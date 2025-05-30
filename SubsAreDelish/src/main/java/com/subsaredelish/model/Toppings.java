@@ -38,27 +38,27 @@ public class Toppings {
 
         switch (toppingType) {
             case "meat":
-                if (sandwichSize.equals("4 inch")) price = 1.00;
-                else if (sandwichSize.equals("8 inch")) price = 2.00;
-                else if (sandwichSize.equals("12 inch")) price = 3.00;
+                if (sandwichSize.equals("4 in")) price = 1.00;
+                else if (sandwichSize.equals("8 in")) price = 2.00;
+                else if (sandwichSize.equals("12 in")) price = 3.00;
                 break;
 
             case "extra meat":
-                if (sandwichSize.equals("4 inch")) price = 0.50;
-                else if (sandwichSize.equals("8 inch")) price = 1.00;
-                else if (sandwichSize.equals("12 inch")) price = 1.50;
+                if (sandwichSize.equals("4 ih")) price = 0.50;
+                else if (sandwichSize.equals("8 in")) price = 1.00;
+                else if (sandwichSize.equals("12 in")) price = 1.50;
                 break;
 
             case "cheese":
-                if (sandwichSize.equals("4 inch")) price = 0.75;
-                else if (sandwichSize.equals("8 inch")) price = 1.50;
-                else if (sandwichSize.equals("12 inch")) price = 2.25;
+                if (sandwichSize.equals("4 in")) price = 0.75;
+                else if (sandwichSize.equals("8 in")) price = 1.50;
+                else if (sandwichSize.equals("12 in")) price = 2.25;
                 break;
 
             case "extra cheese":
-                if (sandwichSize.equals("4 inch")) price = 0.30;
-                else if (sandwichSize.equals("8 inch")) price = 0.60;
-                else if (sandwichSize.equals("12 inch")) price = 0.90;
+                if (sandwichSize.equals("4 in")) price = 0.30;
+                else if (sandwichSize.equals("8 in")) price = 0.60;
+                else if (sandwichSize.equals("12 in")) price = 0.90;
                 break;
         }
 
