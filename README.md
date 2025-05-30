@@ -16,6 +16,11 @@ Purpose of Assignment: Create a P.O.S (Point Of Sales) custom sandwich shop wher
 - Option to cancel an order before checkout
 - Uses interfaces for shared item pricing
 
+
+## Prep-Git Branches
+
+![Git_Branch](images/gitbranch.png)
+
 ---
 
 ## Application Screens
@@ -23,6 +28,7 @@ Purpose of Assignment: Create a P.O.S (Point Of Sales) custom sandwich shop wher
 
 ![Application Screen](images/Application1.png)
 
+----
 ## Screenshots
 
 ### Home Screen
