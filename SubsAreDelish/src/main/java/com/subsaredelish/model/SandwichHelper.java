@@ -8,7 +8,7 @@ public class SandwichHelper {
     public static  String[] CHEESE =  {"american, provolone, cheddar, swiss "};
     public static  String[] REGULAR ={"lettuce, peppers, onions, tomatoes, jalepenos, cucumbers, pickles, guacamole, mushrooms"};
     public static  String[] SAUCE = {"mayo, mustard, ketchup, ranch, thousand islands, vinaigrette "};
-    public static  String[] SIDE = {"au jus"};
+    public static  String[] SIDE = {"au jus, sauce"};
 
 
     //using switch case statements instead so user doesn't have to spell the options out but leaving as a choice

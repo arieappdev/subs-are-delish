@@ -261,7 +261,7 @@ public class UserInterface {
             System.out.println("4) Ranch");
             System.out.println("5) Thousand Island");
             System.out.println("6) Vinaigrette");
-            System.out.println("0) Done adding veggies");
+            System.out.println("0) Done adding sauces ");
 
             String choice = scanner.nextLine();
 
@@ -293,6 +293,42 @@ public class UserInterface {
         }
 
             //side
+        boolean addingSide = true;
+
+        while (addingSide) {
+            System.out.println("Choose a side topping:");
+            System.out.println("1) Au Jus");
+            System.out.println("2) Sauce");
+            System.out.println("0) Done adding sides ");
+
+            String choice = scanner.nextLine();
+        //using nameOfTopping attribute/field from Toppings class to call method and pull into the U.I
+            switch (choice) {
+                case "1":
+                    sandwich.addTopping(new Toppings("Au Jus", "side"));
+                    break;
+                case "2":
+                    sandwich.addTopping(new Toppings("Sauce", "side"));
+                    break;
+                case "3":
+                    sandwich.addTopping(new Toppings("Ketchup", "sauce"));
+                    break;
+                case "4":
+                    sandwich.addTopping(new Toppings("Ranch", "sauce"));
+                    break;
+                case "5":
+                    sandwich.addTopping(new Toppings("Thousand Island", "sauce"));
+                    break;
+                case "6":
+                    sandwich.addTopping(new Toppings("Vinaigrette", "sauce"));
+                    break;
+                case "0":
+                    addingSide = false;
+                    break;
+                default:
+                    System.out.println("Invalid option. Please select again.");
+            }
+        }
 
             System.out.println("Would you like your sandwich toasted? ");
             System.out.println("Y/N");
