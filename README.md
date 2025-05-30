@@ -44,6 +44,8 @@ See branches within my code (:
 
 ![UML Diagram](images/UMLD3.png)
 
+![Final_UML_Diagram](images/finalUML.png)
+
 ---
 
 ## Interesting Code To Share
