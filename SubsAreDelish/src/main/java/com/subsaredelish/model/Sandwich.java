@@ -60,7 +60,7 @@ public class Sandwich implements OrderItem {
 
     // add toppings to
     public String toString() {
-        return sandwichSize + " " + breadType + " Sandwich" + (toasted ? " (toasted)" : "");
+        return sandwichSize + " " + breadType + " Sandwich" + (toasted ? " (toasted)" : ""  ) + "\nToppings: " + toppings;
     }
 
     @Override

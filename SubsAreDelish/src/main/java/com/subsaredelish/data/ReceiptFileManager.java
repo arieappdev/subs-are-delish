@@ -14,13 +14,13 @@ public class ReceiptFileManager {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
         String receiptTimeStamp = LocalDateTime.now().format(formatter)+".txt";
-        String dir = "receipts/";
+        String receiptFile = "receipts/";
 
 
-        try (FileWriter fw = new FileWriter(new File(dir,receiptTimeStamp))) {
+        try (FileWriter fileWriter = new FileWriter(new File(receiptFile,receiptTimeStamp))) {
 
             for(OrderItem item: order.getItems()){
-                fw.write(item.toString());
+                fileWriter.write(item.toString());
             }
             System.out.println("Receipt has been saved to: " + receiptTimeStamp);
         } catch (IOException error) {
