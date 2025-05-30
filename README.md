@@ -19,7 +19,7 @@ Purpose of Assignment: Create a P.O.S (Point Of Sales) custom sandwich shop wher
 
 ## Prep-Git Branches
 
-![Git_Branch](images/gitbranch.png)
+See branches within my code (:
 
 ---
 
