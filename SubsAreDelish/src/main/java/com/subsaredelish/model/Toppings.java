@@ -44,7 +44,7 @@ public class Toppings implements OrderItem {
                 break;
 
             case "extra meat":
-                if (sandwichSize.equals("4 ih")) price = 0.50;
+                if (sandwichSize.equals("4 in")) price = 0.50;
                 else if (sandwichSize.equals("8 in")) price = 1.00;
                 else if (sandwichSize.equals("12 in")) price = 1.50;
                 break;

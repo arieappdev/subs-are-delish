@@ -134,7 +134,7 @@ public class UserInterface {
         boolean addingMeat = true;
 
         while (addingMeat) {
-            System.out.println("Choose Meat: ");
+            System.out.println("Choose Meat:");
 
             //meats
             for (String meat : SandwichHelper.MEAT) {
@@ -352,7 +352,7 @@ public class UserInterface {
 
         String type = scanner.nextLine();
 
-        // if we number the menu we need to switch on the nu,ber
+        // if we number the menu we need to switch on the number
 //        switch (){
 //            case "1":
 //                order.addItemToOrder(new Chips("Lays"));
