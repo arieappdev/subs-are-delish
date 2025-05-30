@@ -1,0 +1,4 @@
+8 White Sandwich (toasted)
+Toppings: [steak , cheddar , Lettuce , Peppers , Onions ]
+Item Cost: $10.50
+sprite( medium} - $2.50laysChips - $1.50

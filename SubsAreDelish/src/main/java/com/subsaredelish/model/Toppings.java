@@ -1,6 +1,6 @@
 package com.subsaredelish.model;
 
-public class Toppings {
+public class Toppings implements OrderItem {
 
     private String nameOfTopping;
     private String toppingType ;
@@ -63,5 +63,10 @@ public class Toppings {
         }
 
         return price;
+    }
+
+    @Override
+    public double getItemCost() {
+        return 0;
     }
 }
